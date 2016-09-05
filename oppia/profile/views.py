@@ -137,7 +137,7 @@ def reset(request):
             else:
                 prefix = 'http://'
             # TODO - better way to manage email message content
-            send_mail('OppiaMobile: Password reset', 'Here is your new password for OppiaMobile: '+newpass
+            send_mail('BrightFuture: Password reset', 'Here is your new password for BrightFuture: '+newpass
                       + '\n\nWhen you next log in you can update your password to something more memorable.'
                       + '\n\n' + prefix + request.META['SERVER_NAME'] ,
                       settings.SERVER_EMAIL, [user.email], fail_silently=False)

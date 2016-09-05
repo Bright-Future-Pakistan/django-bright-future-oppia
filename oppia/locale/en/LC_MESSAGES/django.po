@@ -537,7 +537,7 @@ msgstr ""
 #: templates/base.html:5 templates/includes/header-preview.html:12
 #: templates/includes/header.html:12 templates/oppia/server.html:1
 msgid "app_name"
-msgstr "OppiaMobile"
+msgstr "BrightFuture"
 
 #: templates/base.html:42
 msgid "Dashboard"
