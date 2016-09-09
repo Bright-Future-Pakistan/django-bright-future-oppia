@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 0.4.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-31 13:12+0100\n"
-"PO-Revision-Date: 2015-01-31 13:14+0100\n"
+"PO-Revision-Date: 2016-09-05 12:17+0200\n"
 "Last-Translator: Alex Little <alex@alexlittle.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en-gb\n"
@@ -537,7 +537,7 @@ msgstr ""
 #: templates/base.html:5 templates/includes/header-preview.html:12
 #: templates/includes/header.html:12 templates/oppia/server.html:1
 msgid "app_name"
-msgstr "OppiaMobile"
+msgstr "BrightFuture"
 
 #: templates/base.html:42
 msgid "Dashboard"
@@ -1212,13 +1212,17 @@ msgid "Other"
 msgstr ""
 
 msgid "ffmpeg_missing"
-msgstr "The command line \"ffmpeg\" is missing, or is not accessible in $PATH. Please install it."
+msgstr ""
+"The command line \"ffmpeg\" is missing, or is not accessible in $PATH. "
+"Please install it."
 
 msgid "url_download_fail"
 msgstr "Download failed. Are you sure it is a correct URL?"
 
 msgid "get_length_error"
-msgstr "Failed to get file length. Are you sure that the URL is correct and that it contains a video file?"
+msgstr ""
+"Failed to get file length. Are you sure that the URL is correct and that it "
+"contains a video file?"
 
 #~ msgid "menu_home"
 #~ msgstr "Home"

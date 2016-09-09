@@ -10,9 +10,9 @@ class Migration(migrations.Migration):
         ('oppia', '0002_remove_cohort_course'),
     ]
 
-    operations = [
+    '''operations = [
         migrations.RemoveField(
             model_name='points',
             name='cohort',
         ),
-    ]
+    ]'''

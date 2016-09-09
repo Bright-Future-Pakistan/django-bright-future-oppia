@@ -269,7 +269,7 @@ class ResetPasswordResource(ModelResource):
         else:
             prefix = 'http://'
         # TODO - better way to manage email message content
-        send_mail('OppiaMobile: Password reset', 'Here is your new password for OppiaMobile: '+newpass 
+        send_mail('BrightFuture: Password reset', 'Here is your new password for BrightFuture: '+newpass
                   + '\n\nWhen you next log in you can update your password to something more memorable.' 
                   + '\n\n' + prefix + bundle.request.META['SERVER_NAME'] , 
                   settings.SERVER_EMAIL, [user.email], fail_silently=False) 
@@ -444,7 +444,7 @@ class CourseResource(ModelResource):
         queryset = Course.objects.all()
         resource_name = 'course'
         allowed_methods = ['get']
-        fields = ['id', 'title', 'version', 'shortname','is_draft','description']
+        fields = ['id', 'title', 'version', 'shortname','is_draft','description', 'author', 'username']
         authentication = ApiKeyAuthentication()
         authorization = ReadOnlyAuthorization() 
         serializer = CourseJSONSerializer()
@@ -566,7 +566,11 @@ class CourseResource(ModelResource):
             bundle.data['schedule'] = schedule.lastupdated_date.strftime("%Y%m%d%H%M%S")
             sr = ScheduleResource()
             bundle.data['schedule_uri'] = sr.get_resource_uri(schedule)
-        
+
+        if course and course.user:
+            bundle.data['author'] = course.user.first_name + " " + course.user.last_name
+            bundle.data['username'] = course.user.username
+
         return bundle
     
 class CourseTagResource(ModelResource):
